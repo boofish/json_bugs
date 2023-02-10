@@ -2,7 +2,7 @@
 
 ### 1.Introduction
 
-This is a bug related Expected Behavior Violation.
+This is a bug related to Expected Behavior Violation.
 
 Specifically, as documented in the [specification][1] (i.e, "A JSON parser MUST accept all texts that conform to the JSON grammar"),
 
@@ -11,18 +11,17 @@ json parser is expected to accept all grammar-valid texts.
 However, we found a case that cJSON fails to accept it, and we have checked the text against the JSON grammar specified in RFC 7159 and found it to be compliant.
 Other JSON parsers, such as those found at jsonlint.com and github.com/nlohmann/json, were able to parse the text without issue.
 
-*potential effect*: this may lead to some unexpected errors, e.g., data out-of-sync in some communications.
+*potential effect*: This may lead to some unexpected errors, e.g., data out-of-sync in some communications.
 
 
 ### 2.Trigger the bug
 
-report the corrupted file and returns OK. We attach the corrupted file under the directory `pocs`.
 
 + Running environment
-	* OS: Ubuntu 22.04 or Ubuntu 18.04
+	* OS: Ubuntu (e.g., Ubuntu 18.04, 16.04, 22.04)
 
-+ Target program required
-	* cJSON.c, cJSON.h from https://github.com/DaveGamble/cJSON and a test.c in the following
++ Source code required
+	* `cJSON.c`, `cJSON.h` from https://github.com/DaveGamble/cJSON and a `test.c` (see below)
 
 + Steps
 
@@ -47,7 +46,7 @@ report the corrupted file and returns OK. We attach the corrupted file under the
 		}
 		```
 		
-	+ File structure (they are in same directory)
+	+ File structure (they are in the same directory)
 		```
 		- cJSON.c
 		- cJSON.h
@@ -59,7 +58,7 @@ report the corrupted file and returns OK. We attach the corrupted file under the
 	 	./test
 
 		```
-		we will see it reports an error. If you provide other valid json test, e.g., `const char *s = "{\"a\": true}";`, it will correctly parse it. 
+		We will see it reports an error, which is unexpected. If you provide other valid json test, e.g., `const char *s = "{\"a\": true}";`, it will correctly parse it. 
 
 
 
