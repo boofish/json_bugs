@@ -1,10 +1,10 @@
-# Denial of Service in mJSON when parsing certain text
+# Denial of Service in mjson when parsing certain text
 
 ### 1.Introduction
 
-This is a bug related to Expected Behavior Violation in [mJSON][1].
+This is a bug related to Expected Behavior Violation in [mjson][1].
 
-Specifically, we have encountered some cases where mJSON takes an unusually long time (more than 10 seconds) to parse certain text, which is unexpected.
+Specifically, we have encountered some cases where mjson takes an unusually long time (more than 10 seconds) to parse certain text, which is unexpected.
 
 We also tested the same text against other JSON parsers like [cJSON][2] and [json][3]. These parsers were able to parse the text quickly and without any problems.
 
