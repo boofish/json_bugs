@@ -48,9 +48,9 @@ We also tested the same text against other JSON parsers like [cJSON][2] and [jso
 	 	./test
 		```
 		It is evident that the process takes an unusually long time to complete. One can verify this by running the command `time ./test` to see the duration of the process.
-
-
-		**Analysis**: We found that the root cause of the bug is an error in implementing of the function `mystrtod`. More specifically, the loop within the function has a total of 1,622,094,001 iterations.
+		
+	+ Analysis 
+		We found that the root cause of the bug is an error in implementing of the function `mystrtod`. More specifically, the loop within the function has a total of 1,622,094,001 iterations.
 		
 
 [1]: https://github.com/cesanta/mjson
