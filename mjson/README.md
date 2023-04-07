@@ -12,7 +12,7 @@ We also tested the same text against other JSON parsers like [cJSON][2] and [jso
 [mjson][1] is specifically designed to operate on resource-constrained embedded devices, such as microcontrollers used in critical systems like Industrial Control Systems. Any delay in parsing important data could have catastrophic consequences in such scenarios.
 
 
-### 2.Trigger the bug
+### 2.Trigger The Bug
 
 
 + Running environment
@@ -50,8 +50,7 @@ We also tested the same text against other JSON parsers like [cJSON][2] and [jso
 		It is evident that the process takes an unusually long time to complete. One can verify this by running the command `time ./test` to see the duration of the process.
 
 
-	+ Analysis
-		Based on our analysis, we found that the root cause of the bug is an error in implementing of the function `mystrtod`. More specifically, the loop within the function has a total of 1,622,094,001 iterations.
+		*Analysis*: We found that the root cause of the bug is an error in implementing of the function `mystrtod`. More specifically, the loop within the function has a total of 1,622,094,001 iterations.
 		
 
 
