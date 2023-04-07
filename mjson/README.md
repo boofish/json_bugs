@@ -8,7 +8,7 @@ Specifically, we have encountered some cases where mjson takes an unusually long
 
 We also tested the same text against other JSON parsers like [cJSON][2] and [json][3]. These parsers were able to parse the text quickly and without any problems.
 
-*potential effect*: This may lead to some unexpected errors, e.g., Denial Of Service.
+*Potential effect*: This may lead to some unexpected errors, e.g., Denial Of Service.
 [mjson][1] is specifically designed to operate on resource-constrained embedded devices, such as microcontrollers used in critical systems like Industrial Control Systems. Any delay in parsing important data could have catastrophic consequences in such scenarios.
 
 
@@ -50,9 +50,8 @@ We also tested the same text against other JSON parsers like [cJSON][2] and [jso
 		It is evident that the process takes an unusually long time to complete. One can verify this by running the command `time ./test` to see the duration of the process.
 
 
-		*Analysis*: We found that the root cause of the bug is an error in implementing of the function `mystrtod`. More specifically, the loop within the function has a total of 1,622,094,001 iterations.
+		**Analysis**: We found that the root cause of the bug is an error in implementing of the function `mystrtod`. More specifically, the loop within the function has a total of 1,622,094,001 iterations.
 		
-
 
 [1]: https://github.com/cesanta/mjson
 [2]: https://github.com/DaveGamble/cJSON
