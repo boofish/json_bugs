@@ -18,7 +18,7 @@ json parser is expected to reject the text if it contains unescaped control char
 However, we found a case that cJSON fails to reject it.
 Other JSON parsers, such as those found at [github.com/nlohmann/json][3] and [github.com/simdjson/simdjson][2], were able to parse the text without issue.
 
-*potential effect*: This may lead to some unexpected errors, e.g., data out-of-sync in some communications.
+*potential effect*: This may lead to some unexpected errors, e.g., data out-of-sync in communications, collect invalid json data for other programs.
 
 
 ### 2.Trigger the bug
@@ -71,7 +71,7 @@ Other JSON parsers, such as those found at [github.com/nlohmann/json][3] and [gi
 	 	./test
 
 		```
-		We will see it reports no error, which is unexpected. If you use other parsers, such as [github.com/nlohmann/json][3], which will correctly report an error. 
+		We will see it reports no error, which is unexpected. I also tried other parsers, such as [github.com/nlohmann/json][3] and [github.com/simdjson/simdjson][2], which will correctly report an error. 
 
 
 
