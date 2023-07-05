@@ -2,7 +2,7 @@
 
 ### 1.Introduction
 
-This is a bug related to Expected Behavior Violation, cJSON accepts unescaped control characters in string.
+This is a bug related to Expected Behavior Violation, cJSON incorrectly accepts unescaped control characters in json string.
 
 Specifically, as documented in Section 7 of the [specification][1]（i.e., "... the characters that must be escaped: ... the control characters (U+0000 through U+001F)".
 

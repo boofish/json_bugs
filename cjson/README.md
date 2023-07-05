@@ -11,7 +11,7 @@ json parser is expected to accept all grammar-valid texts.
 However, we found a case that cJSON fails to accept it, and we have checked the text against the JSON grammar specified in RFC 7159 and found it to be compliant.
 Other JSON parsers, such as those found at jsonlint.com and github.com/nlohmann/json, were able to parse the text without issue.
 
-*potential effect*: This may lead to some unexpected errors, e.g., data out-of-sync in some communications.
+*potential effect*: This may lead to some unexpected errors, e.g., data out-of-sync in some communications, or invalid data 
 
 
 ### 2.Trigger the bug
