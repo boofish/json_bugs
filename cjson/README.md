@@ -64,4 +64,6 @@ Other JSON parsers, such as those found at jsonlint.com and github.com/nlohmann/
 
 [1]: https://www.rfc-editor.org/rfc/rfc7159
 
+CVE-2023-26819 is assigned for this.
+
 
