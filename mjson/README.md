@@ -58,3 +58,5 @@ We also tested the same text against other JSON parsers like [cJSON][2] and [jso
 [3]: https://github.com/nlohmann/json
 
 
+CVE-2023-30421 is assigned for this.
+
